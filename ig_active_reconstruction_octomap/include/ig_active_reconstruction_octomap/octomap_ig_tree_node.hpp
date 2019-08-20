@@ -42,7 +42,6 @@ namespace octomap
   {
 
   public:
-
     IgTreeNode();
     ~IgTreeNode();
     
