@@ -20,7 +20,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
-find_package(octomap 1.8 REQUIRED)
+find_package(OCTOMAP 1.8 REQUIRED)
 find_package(Boost REQUIRED)
 find_package(PCL 1.7 REQUIRED)
 find_package(Eigen REQUIRED)
@@ -43,7 +43,7 @@ catkin_package(
   DEPENDS
     PCL
     Eigen
-    octomap
+    OCTOMAP
     Boost
 )
 

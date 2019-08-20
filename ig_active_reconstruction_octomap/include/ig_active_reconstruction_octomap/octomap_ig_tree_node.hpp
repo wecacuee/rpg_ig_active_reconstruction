@@ -33,9 +33,6 @@ namespace world_representation
 namespace octomap
 {
 
-  // forward declaraton for "friend"
-  class IgTree;
-
   /*!
    * The IgTreeNode is based on octomaps OcTreeNode class, adding
    * some functionality needed for information gain calculations.
@@ -45,7 +42,6 @@ namespace octomap
   {
 
   public:
-    friend class IgTree; // needs access to node children (inherited)
 
     IgTreeNode();
     ~IgTreeNode();
@@ -68,9 +64,6 @@ namespace octomap
     {
       return static_cast<const IgTreeNode*> (children[i]);
     }
-
-    inline double getValue() const { return value; }
-    inline void setValue(const double v) { value = v; }
 
     // -- node occupancy  ----------------------------
 
@@ -124,7 +117,6 @@ namespace octomap
     double occ_dist_; //! if node is occluded this sets the shortest distance from an occupied node for which the occlusion was registered, -1 if not registered so far
     double max_dist_; //! Maximal occlusion update distance used when calculating occlusions.
     bool has_no_measurement_; //! True if this node was setup for additional data but was not actually part of a measurement (not free and not occupied)
-    double value;
   };
 
 } // end namespace
