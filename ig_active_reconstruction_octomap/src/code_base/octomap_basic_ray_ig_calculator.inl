@@ -19,6 +19,7 @@
 #define CSCOPE BasicRayIgCalculator<TREE_TYPE>
 
 #include <octomap/octomap_types.h>
+#include <octomap/OcTreeKey.h>
 #include <boost/foreach.hpp>
 
 namespace ig_active_reconstruction

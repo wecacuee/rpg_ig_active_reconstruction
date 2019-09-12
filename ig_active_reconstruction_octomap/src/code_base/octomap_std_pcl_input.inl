@@ -20,6 +20,7 @@
 
 #include <limits>
 
+#include <octomap/octomap_utils.h>
 #include <pcl/common/transforms.h>
 #include <pcl/filters/passthrough.h>
 #include <pcl/filters/filter_indices.h>
